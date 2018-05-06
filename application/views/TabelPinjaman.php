@@ -133,7 +133,6 @@
                         <td><?php echo $id_anggota;?> </td>
                         <td><?php echo $tanggal_pelunasan;?> </td>
                         
-                        <td><a href='ctrNasabah/edit/<?php echo $id_pelunasan ?>' class='btn btn-sm btn-info'>Update</a></td>
                         <td><a href='ctrNasabah/delete/<?php echo $id_pelunasan; ?>' class='btn btn-sm btn-danger'>Delete</a></td>
                   </tr>
                   <?php endforeach;?>
