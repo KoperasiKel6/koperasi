@@ -111,6 +111,7 @@
                 <thead class="text-primary">
                     <th>Id Pinjaman</th>
                     <th>Besar Pinjaman</th>
+                    <th>Sisa Pinjaman</th>
                     <th>Tanggal Pinjaman</th>
                     <th>Id Anggota</th>
                     <th>Jatuh Tempo</th>
@@ -122,6 +123,7 @@
                         foreach($Pinjam as $i):
                               $id_pinjaman=$i['id_pinjaman'];
                               $besar_pinjaman=$i['besar_pinjaman'];
+                              $sisa_angsuran=$i['sisa_angsuran'];
                               $tanggal_pinjaman=$i['tanggal_pinjaman'];
                               $id_anggota=$i['id_anggota'];
                               $tanggal_pelunasan=$i['tangga_pelunasan'];
@@ -129,11 +131,12 @@
                   <tr>
                         <td><?php echo $id_pinjaman;?> </td>
                         <td><?php echo $besar_pinjaman;?> </td>
+                        <td><?php echo $sisa_angsuran;?> </td>
                         <td><?php echo $tanggal_pinjaman;?> </td>
                         <td><?php echo $id_anggota;?> </td>
                         <td><?php echo $tanggal_pelunasan;?> </td>
                         
-                        <td><a href='ctrNasabah/delete/<?php echo $id_pelunasan; ?>' class='btn btn-sm btn-danger'>Delete</a></td>
+                        <td><a href='ctrpinjam/delete/<?php echo $id_pinjaman; ?>' class='btn btn-sm btn-danger'>Delete</a></td>
                   </tr>
                   <?php endforeach;?>
             </tbody>

@@ -25,6 +25,7 @@ class Pinjam extends CI_Model {
 		$data = array(
 			'id_pinjaman' => '',
 			'besar_pinjaman' => $this->input->post('besar_pinjaman'),
+			'sisa_angsuran' => $this->input->post('besar_pinjaman'),
 			'tanggal_pinjaman' => $this->input->post('tanggal_pinjaman'),
 			'id_anggota' => $this->input->post('id_anggota'),
 			'tangga_pelunasan' => $this->input->post('tangga_pelunasan')
