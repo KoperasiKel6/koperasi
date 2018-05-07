@@ -42,15 +42,15 @@
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
             <!--logo start-->
-            <a href="home" class="logo"><b>DASHGUM FREE</b></a>
+            <a href="index.html" class="logo"><b>DASHGUM FREE</b></a>
             <!--logo end-->
             <div class="nav notify-row" id="top_menu">
 
             </div>
             <div class="top-menu">
-            	<ul class="nav pull-right top-menu">
+              <ul class="nav pull-right top-menu">
                     <li><a class="logout" href="login.html">Logout</a></li>
-            	</ul>
+              </ul>
             </div>
         </header>
       <!--header end-->
@@ -67,7 +67,7 @@
                   <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
                   <h5 class="centered">Marcel Newman</h5>
                     
-                  <li class="mt">
+                    <li class="mt">
                       <a  href="home">
                           <i class="fa fa-dashboard"></i>
                           <span>Dashboard</span>
@@ -75,7 +75,7 @@
                   </li>
 
                   <li class="sub-menu">
-                      <a class="active" href="CtrNasabah">
+                      <a href="CtrNasabah">
                           <i class="fa fa-desktop" ></i>
                           <span>Data Anggota</span>
                           
@@ -83,75 +83,65 @@
                   </li>
 
                   <li class="sub-menu">
-                      <a  href="ctrpinjam">
+                      <a href="ctrpinjam">
                           <i class="fa fa-cogs"></i>
                           <span>Data Pinjaman</span>
                       </a>
                   </li>
 
                   <li class="sub-menu">
-                      <a href="ctrangsuran" >
+                      <a class="active" href="ctrangsuran" >
                           <i class="fa fa-book"></i>
                           <span>Data Angsuran</span>
                       </a>
                   </li>
+
               </ul>
               <!-- sidebar menu end-->
           </div>
       </aside>
-      <section id="main-content">
+       <section id="main-content">
       <section class="wrapper">
                               <br></br>
-                             <td><a href='ctrNasabah/tambah' class='btn btn-sm btn-info'>Tambah</a></td>
+                             <td><a href='ctrAngsuran/tambah' class='btn btn-sm btn-info'>Tambah</a></td>
                              <br></br>
-                             <br></br>
-        <div class="card-content table-responsive">
+                             <br></br><div class="card-content table-responsive">
             <table class="table">
                 <thead class="text-primary">
-                    <th>Id Nasabah</th>
-                    <th>Nama</th>
-                    <th>Alamat</th>
-                    <th>Tempat Lahir</th>
-                    <th>Tanggal Lahir</th>
-                    <th>Jenis Kelamin</th>
-                    <th>Gambar</th>
+                    <th>Id Angsuran</th>
+                    <th>Id Anggota</th>
+                    <th>Id Pinjam</th>
+                    <th>Tanggal Angsuran</th>
+                    <th>Besar Angsuran</th>
+                    <!-- <th>Sisa Angsuran</th> -->
                     <th>Aksi</th>
                 </thead>
 
                 <tbody>
                   <?php
-                        foreach($nasabah as $i):
-                              $id_nasabah=$i['id_anggota'];
-                              $nama=$i['nama_anggota'];
-                              $alamat=$i['alamat_anggota'];
-                              $tempat=$i['tempat_lahir_anggota'];
-                              $tanggal=$i['tanggal_lahir_anggota'];
-                              $jenis_kelamin=$i['jk_anggota'];
-                              $gambar=$i['img_anggota'];
+                        foreach($angsuran as $i):
+                              $id_angsuran=$i['id_angsuran'];
+                              $id_anggota=$i['id_anggota'];
+                              $id_pinjaman=$i['id_pinjaman'];
+                              $tanggal_angsuran=$i['tanggal_angsuran'];
+                              $besar_angsuran=$i['besar_angsuran'];
+                              // $besar_pinjaman=$i['besar_pinjaman'];
                   ?>
                   <tr>
-                        <td><?php echo $id_nasabah;?> </td>
-                        <td><?php echo $nama;?> </td>
-                        <td><?php echo $alamat;?> </td>
-                        <td><?php echo $tempat;?> </td>
-                        <td><?php echo $tanggal;?> </td>
-                        <td><?php echo $jenis_kelamin;?> </td>
-                        <td><img src="img/<?php echo $gambar;?>"alt="Image" width="50" height="40"> </td>
-                        <td><a href='ctrNasabah/edit/<?php echo $id_nasabah ?>' class='btn btn-sm btn-info'>Update</a></td>
-                        <td><a href='ctrNasabah/delete/<?php echo $id_nasabah; ?>' class='btn btn-sm btn-danger'>Delete</a></td>
+                        <td><?php echo $id_angsuran;?> </td>
+                        <td><?php echo $id_anggota;?> </td>
+                        <td><?php echo $id_pinjaman;?> </td>
+                        <td><?php echo $tanggal_angsuran;?> </td>
+                        <td><?php echo $besar_angsuran;?> </td>
+                        <!-- <td><?php echo $besar_pinjaman;?></td> -->
+
+                        
+                        <td><a href='ctrAnsuran/delete/<?php echo $id_pelunasan; ?>' class='btn btn-sm btn-danger'>Delete</a></td>
                   </tr>
                   <?php endforeach;?>
             </tbody>
         </table>
     </div>
-                              </tbody>
-                          </table>
-                      </div><!-- /content-panel -->
-                  </div><!-- /col-md-12 -->
-              </div><!-- /row -->
-              </section>
-              </section>
-
     <!-- js placed at the end of the document so the pages load faster -->
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/jquery-1.8.3.min.js"></script>
@@ -170,6 +160,6 @@
 
     <!--script for this page-->
     <script src="assets/js/sparkline-chart.js"></script>    
-	<script src="assets/js/zabuto_calendar.js"></script>	
+  <script src="assets/js/zabuto_calendar.js"></script>  
   </body>
 </html>

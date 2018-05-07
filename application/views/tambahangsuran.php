@@ -75,7 +75,7 @@
                   </li>
 
                   <li class="sub-menu">
-                      <a class="active" href="../ctrNasabah">
+                      <a href="../ctrNasabah">
                           <i class="fa fa-desktop" ></i>
                           <span>Data Anggota</span>
                           
@@ -83,95 +83,86 @@
                   </li>
 
                   <li class="sub-menu">
-                      <a  href="../ctrpinjam">
+                      <a href="../ctrpinjam">
                           <i class="fa fa-cogs"></i>
                           <span>Data Pinjaman</span>
                       </a>
                   </li>
 
                   <li class="sub-menu">
-                      <a href="../ctrangsuran" >
+                      <a class="active" href="../ctrAngsuran.php" >
                           <i class="fa fa-book"></i>
                           <span>Data Angsuran</span>
                       </a>
-                  </li>
-
-                  <!-- <li class="sub-menu">
-                      <a  href="TabelTransaksi.php" >
-                          <i class="fa fa-tasks"></i>
-                          <span>Data Ang</span>
-                      </a>
-                  </li> -->
-                  
+                  </li>               
                
 
               </ul>
               <!-- sidebar menu end-->
           </div>
-      </aside>
-      <section id="main-content">
+          <section id="main-content">
       <section class="wrapper">
-
 <div class="container">
     <?php echo validation_errors(); ?>
       <?php
-        echo form_open('ctrNasabah/tambah', array('enctype'=>'multipart/form-data')); 
+        echo form_open('ctrAngsuran/tambah', array('enctype'=>'multipart/form-data')); 
        ?>
-      <table>
+       <h1>Tambah Angsuran</h1>
+       <br></br>
+       <table>
         <div class="form-group">
-          <label class="col-sm-2 col-sm-2 control-label">Nama</label>
+          <label class="col-sm-2 col-sm-2 control-label">Id Anggota</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" name="nama" value="<?php echo set_value('nama_anggota'); ?>">
+            <select name="id_anggota" class="form-control" required>
+              <option value="">Pilih Id Anggota</option>
+              <?php foreach($data as $data): ?>
+              <option value="<?php echo $data->id_anggota; ?>"><?php echo $data->id_anggota; ?></option>
+              <?php endforeach; ?>
+            </select>
+         </div>
+        </div>
+        <br></br>
+        <br></br>
+         <div class="form-group">
+          <label class="col-sm-2 col-sm-2 control-label">Id Pinjaman</label>
+          <div class="col-sm-10">
+            <select name="id_pinjaman" class="form-control" required>
+              <option value="">Pilih Id Pinjaman</option>
+              <?php foreach($pinjam as $pinjam): ?>
+              <option value="<?php echo $pinjam->id_pinjaman; ?>"><?php echo $pinjam->id_pinjaman; ?></option>
+              <?php endforeach; ?>
+            </select>
+       </div>
+        </div>
+        <br></br>
+        <br></br>
+
+        <div class="form-group">
+          <label class="col-sm-2 col-sm-2 control-label">Tanggal Angsuran</label>
+          <div class="col-sm-10">
+            <input type="date" name="tanggal_angsuran" value="<?php echo set_value('tanggal_angsuran') ?>">
           </div>
         </div>
         <br></br>
         <br></br>
         <div class="form-group">
-          <label class="col-sm-2 col-sm-2 control-label">Alamat Anggota</label>
+          <label class="col-sm-2 col-sm-2 control-label">Besar Angsuran</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" name="alamat" value="<?php echo set_value('alamat_anggota') ?>">
+            <input type="text" name="besar_angsuran" value="<?php echo set_value('besar_angsuran'); ?>">
           </div>
         </div>
         <br></br>
         <br></br>
-        <div class="form-group">
-          <label class="col-sm-2 col-sm-2 control-label">Tempat Lahir</label>
-          <div class="col-sm-10">
-            <input type="text" class="form-control" name="tempat" value="<?php echo set_value('tempat_lahir_anggota') ?>">
-          </div>
-        </div>
-        <br></br>
-        <br></br>
-        <div class="form-group">
-          <label class="col-sm-2 col-sm-2 control-label">Tanggal Lahir</label>
-          <div class="col-sm-10">
-            <input type="date" class="form-control" name="tanggal" value="<?php echo set_value('tanggal_lahir_anggota') ?>">
-          </div>
-        </div>
-        <br></br>
-        <br></br>
-        <div class="form-group">
-          <label class="col-sm-2 col-sm-2 control-label">Jenis Kelamin</label>
-          <div class="col-sm-10">
-            <input type="text" class="form-control" name="jenis_kelamin" value="<?php echo set_value('jk_anggota') ?>">
-          </div>
-        </div>
-          <td>Gambar</td>
-          <td>:</td>
-          <td><input type="file" name="gambar" value="<?php echo set_value('gambar') ?>"></td>
-        </tr>
-        <tr>
-          <td colspan="3"><input type="submit" name="simpan" value="simpan"></td>
-        </tr>
+        
+          <center><input type="submit" name="simpan" value="simpan"></center>
+        
       </table>
     </div>
-    </section>
-    </section>
+</section>
+</section>
+ </body>
 
-
-</body>
- <!-- js placed at the end of the document so the pages load faster -->
-    <script src="../assets/js/jquery.js"></script>
+<script src="../assets/js/jquery.js"></script>
     <script src="../assets/js/jquery-1.8.3.min.js"></script>
     <script src="../assets/js/bootstrap.min.js"></script>
     <script class="include" type="text/javascript" src="../assets/js/jquery.dcjqaccordion.2.7.js"></script>

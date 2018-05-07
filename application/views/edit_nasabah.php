@@ -90,18 +90,18 @@
                   </li>
 
                   <li class="sub-menu">
-                      <a href="TabelAngsuran.php" >
+                      <a href="../../ctrangsuran" >
                           <i class="fa fa-book"></i>
                           <span>Data Angsuran</span>
                       </a>
                   </li>
 
-                  <li class="sub-menu">
+                  <!-- <li class="sub-menu">
                       <a  href="TabelTransaksi.php" >
                           <i class="fa fa-tasks"></i>
                           <span>Data Transaksi</span>
                       </a>
-                  </li>
+                  </li> -->
                   
                
 

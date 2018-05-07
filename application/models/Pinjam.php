@@ -13,6 +13,11 @@ class Pinjam extends CI_Model {
 		return $query->result();
 	}
 
+	public function get_all_pinjam(){
+		$query = $this->db->get('pinjaman');
+		return $query->result(); 
+	}
+
 	
 
 	public function insert()
