@@ -106,36 +106,50 @@
 
 <div class="container">
     <?php echo validation_errors(); ?>
+    <?php
+      $this->form_validation->set_error_delimiters('<div class="alert alert-warning" role="alert">', '</div>');
+    ?>
       <?php
-        echo form_open('Ctrpinjam/tambah', array('enctype'=>'multipart/form-data')); 
+        echo form_open('Ctrpinjam/tambah', array('class'=>'needs-validation', 'novalidate'=>'')); 
        ?>
       <table>
-        <tr>
-          <td>Besar Pinjam</td>
-          <td>:</td>
-          <td><input type="text" name="besar_pinjaman" value="<?php echo set_value('besar_pinjaman'); ?>"></td>
-        </tr>
-        <tr>
-          <td>Tanggal Pinjaman</td>
-          <td>:</td>
-          <td><input type="date" name="tanggal_pinjaman" value="<?php echo set_value('tanggal_pinjaman') ?>"></td>
-        </tr>
         <tr>
           <label>Id Anggota</label>
             <select name="id_anggota" class="form-control" required>
               <option value="">Pilih Id Anggota</option>
               <?php foreach($data as $pinjam): ?>
               <option value="<?php echo $pinjam->id_anggota; ?>"><?php echo $pinjam->id_anggota; ?></option>
+              <div class="invalid-feedback">Isi Id Anggota</div></td>
               <?php endforeach; ?>
             </select>
         </tr>
+        <br>
+        <br>
+        <div class="form-group">
+          <label class="col-sm-2 col-sm-2 control-label">Besar Pinjaman</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="besar_pinjaman" value="<?php echo set_value('besar_pinjaman'); ?>" required>
+            <div class="invalid-feedback">Isi Besar Pinjaman</div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="form-group">
+          <label class="col-sm-2 col-sm-2 control-label">Tanggal Pinjam</label>
+          <div class="col-sm-10">
+            <input type="date" class="form-control" name="tanggal_pinjaman" value="<?php echo set_value('tanggal_pinjaman'); ?>" required>
+            <div class="invalid-feedback">Isi Tanggal Pinjam</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 col-sm-2 control-label">Tanggal Pelunasan</label>
+          <div class="col-sm-10">
+            <input type="date" class="form-control" name="tangga_pelunasan" value="<?php echo set_value('tangga_pelunasan'); ?>" required>
+            <div class="invalid-feedback">Isi Tanggal Pelunasan</div>
+          </div>
+        </div>
         <tr>
-          <td>Tanggal Pelunasan</td>
-          <td>:</td>
-          <td><input type="date" name="tangga_pelunasan" value="<?php echo set_value('tangga_pelunasan') ?>"></td>
-        </tr>        
-        <tr>
-          <td colspan="3"><input type="submit" name="simpan" value="simpan"></td>
+          <td colspan="3"><input id="submitBtn" type="submit" name="simpan" value="simpan"></td>
         </tr>
       </table>
     </div>
@@ -160,5 +174,20 @@
     <!--script for this page-->
     <script src="../assets/js/sparkline-chart.js"></script>    
   <script src="../assets/js/zabuto_calendar.js"></script>  
+
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/assets/css/bootstrap.min.css">
+        
+        <link rel="stylesheet" href="<?php echo base_url() ?>assets/assets/css/custom.css">
+
+        <script src="<?php echo base_url() ?>assets/assets/js/jquery-1.9.1.min.js"></script>
+
+  <script src="<?php echo base_url() ?>assets/assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="<?php echo base_url() ?>assets/assets/js/holder.min.js"></script>
+
+    <!-- Custom -->
+    <script src="<?php echo base_url() ?>assets/assets/js/custom.js"></script>
+
   </body>
 </html>

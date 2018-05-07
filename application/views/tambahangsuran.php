@@ -154,7 +154,7 @@
         <br></br>
         <br></br>
         
-          <center><input type="submit" name="simpan" value="simpan"></center>
+          <center><input id="submitBtn" type="submit" name="simpan" value="simpan"></center>
         
       </table>
     </div>
@@ -180,5 +180,19 @@
     <!--script for this page-->
     <script src="../assets/js/sparkline-chart.js"></script>    
   <script src="../assets/js/zabuto_calendar.js"></script>  
+
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/assets/css/bootstrap.min.css">
+        
+        <link rel="stylesheet" href="<?php echo base_url() ?>assets/assets/css/custom.css">
+
+        <script src="<?php echo base_url() ?>assets/assets/js/jquery-1.9.1.min.js"></script>
+
+  <script src="<?php echo base_url() ?>assets/assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="<?php echo base_url() ?>assets/assets/js/holder.min.js"></script>
+
+    <!-- Custom -->
+    <script src="<?php echo base_url() ?>assets/assets/js/custom.js"></script>
   </body>
 </html>
