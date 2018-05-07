@@ -21,6 +21,7 @@ class Ctrpinjam extends CI_Controller {
 		$data = array();
 		$data['data'] = $this->Nasabah->get_all_nasabah();
 
+		$this->load->helper('form');
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('besar_pinjaman', 'besar pinjaman', 'required', array('required' => 'Isi %s terlebih dahulu , '));
 		$this->form_validation->set_rules('tanggal_pinjaman', 'tanggal pinjaman', 'required', array('required' => 'Isi %s terlebih dahulu, '));

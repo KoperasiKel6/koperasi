@@ -113,15 +113,19 @@
       <section class="wrapper">
 
 <div class="container">
+  <?php
+      $this->form_validation->set_error_delimiters('<div class="alert alert-warning" role="alert">', '</div>');
+    ?>
     <?php echo validation_errors(); ?>
       <?php
-        echo form_open('ctrNasabah/tambah', array('enctype'=>'multipart/form-data')); 
+        echo form_open_multipart('ctrNasabah/tambah', array('class'=>'needs-validation', 'novalidate'=>''));
        ?>
       <table>
         <div class="form-group">
           <label class="col-sm-2 col-sm-2 control-label">Nama</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" name="nama" value="<?php echo set_value('nama_anggota'); ?>">
+            <input type="text" class="form-control" name="nama" value="<?php echo set_value('nama_anggota'); ?>" required>
+            <div class="invalid-feedback">Isi Nama</div>
           </div>
         </div>
         <br></br>
@@ -129,7 +133,8 @@
         <div class="form-group">
           <label class="col-sm-2 col-sm-2 control-label">Alamat Anggota</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" name="alamat" value="<?php echo set_value('alamat_anggota') ?>">
+            <input type="text" class="form-control" name="alamat" value="<?php echo set_value('alamat_anggota') ?>" required>
+            <div class="invalid-feedback">Isi Alamat</div>
           </div>
         </div>
         <br></br>
@@ -137,7 +142,8 @@
         <div class="form-group">
           <label class="col-sm-2 col-sm-2 control-label">Tempat Lahir</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" name="tempat" value="<?php echo set_value('tempat_lahir_anggota') ?>">
+            <input type="text" class="form-control" name="tempat" value="<?php echo set_value('tempat_lahir_anggota') ?>" required>
+            <div class="invalid-feedback">Isi Tempat Lahir</div>
           </div>
         </div>
         <br></br>
@@ -145,7 +151,8 @@
         <div class="form-group">
           <label class="col-sm-2 col-sm-2 control-label">Tanggal Lahir</label>
           <div class="col-sm-10">
-            <input type="date" class="form-control" name="tanggal" value="<?php echo set_value('tanggal_lahir_anggota') ?>">
+            <input type="date" class="form-control" name="tanggal" value="<?php echo set_value('tanggal_lahir_anggota') ?>" required>
+            <div class="invalid-feedback">Isi Tanggal Lahir</div>
           </div>
         </div>
         <br></br>
@@ -153,7 +160,8 @@
         <div class="form-group">
           <label class="col-sm-2 col-sm-2 control-label">Jenis Kelamin</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" name="jenis_kelamin" value="<?php echo set_value('jk_anggota') ?>">
+            <input type="text" class="form-control" name="jenis_kelamin" value="<?php echo set_value('jk_anggota') ?>" required>
+            <div class="invalid-feedback">Isi Jenis Kelamin</div>
           </div>
         </div>
           <td>Gambar</td>
@@ -161,15 +169,15 @@
           <td><input type="file" name="gambar" value="<?php echo set_value('gambar') ?>"></td>
         </tr>
         <tr>
-          <td colspan="3"><input type="submit" name="simpan" value="simpan"></td>
+          <td colspan="3"><input id="submitBtn" type="submit" name="simpan" value="simpan"></td>
         </tr>
       </table>
     </div>
     </section>
     </section>
+  </form>
 
 
-</body>
  <!-- js placed at the end of the document so the pages load faster -->
     <script src="../assets/js/jquery.js"></script>
     <script src="../assets/js/jquery-1.8.3.min.js"></script>
@@ -188,6 +196,22 @@
 
     <!--script for this page-->
     <script src="../assets/js/sparkline-chart.js"></script>    
-  <script src="../assets/js/zabuto_calendar.js"></script>  
+  <script src="../assets/js/zabuto_calendar.js"></script>
+
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/assets/css/bootstrap.min.css">
+        
+        <link rel="stylesheet" href="<?php echo base_url() ?>assets/assets/css/custom.css">
+
+        <script src="<?php echo base_url() ?>assets/assets/js/jquery-1.9.1.min.js"></script>
+
+  <script src="<?php echo base_url() ?>assets/assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="<?php echo base_url() ?>assets/assets/js/holder.min.js"></script>
+
+    <!-- Custom -->
+    <script src="<?php echo base_url() ?>assets/assets/js/custom.js"></script>
+
+
   </body>
 </html>

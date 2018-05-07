@@ -90,7 +90,7 @@
                   </li>
 
                   <li class="sub-menu">
-                      <a class="active" href="../ctrAngsuran.php" >
+                      <a class="active" href="../ctrAngsuran" >
                           <i class="fa fa-book"></i>
                           <span>Data Angsuran</span>
                       </a>

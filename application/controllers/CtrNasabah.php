@@ -18,9 +18,9 @@ class CtrNasabah extends CI_Controller {
 	public function tambah()
 	{
 		$data = array();
-		// $data['jk']=$this->db->anggota('anggota','jk_anggota');
-		// $data['nasabah'] = $this->nasabah->get_all_nasabah(); 
+		
 
+		$this->load->helper('form');
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('nama', 'nama', 'required', array('required' => 'Isi %s terlebih dahulu , '));
 		$this->form_validation->set_rules('alamat', 'alamat', 'required', array('required' => 'Isi %s terlebih dahulu, '));
@@ -28,7 +28,7 @@ class CtrNasabah extends CI_Controller {
 		$this->form_validation->set_rules('tanggal', 'tanggal lahir', 'required', array('required' => 'Isi %s terlebih dahulu, '));
 		$this->form_validation->set_rules('jenis_kelamin', 'jenis kelamin', 'required', array('required' => 'Isi %s terlebih dahulu, '));
 
-		if ($this->form_validation->run()==FALSE){
+		if ($this->form_validation->run()===FALSE){
 			$this->load->view('tambah_nasabah', $data);
 		}
 		else
@@ -56,6 +56,9 @@ class CtrNasabah extends CI_Controller {
 	}
 
 	public function edit($id){
+		$this->load->helper('form');
+		$this->load->library('form_validation');
+
 		$data['single'] = $this->nasabah->get_single($id);
 
 		if($this->input->post('edit')){

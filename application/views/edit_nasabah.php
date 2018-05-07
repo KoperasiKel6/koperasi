@@ -112,8 +112,12 @@
       <section id="main-content">
       <section class="wrapper">
       <div class="container">
-                    <?php foreach ($single as $key): ?>
-      <?php echo form_open('ctrNasabah/edit/'.$key->id_anggota, array('enctype'=>'multipart/form-data')); ?>
+      <?php foreach ($single as $key): ?>
+      <?php
+      $this->form_validation->set_error_delimiters('<div class="alert alert-warning" role="alert">', '</div>');
+      ?>
+      <?php echo validation_errors(); ?>
+      <?php echo form_open_multipart(current_url(), array('class'=>'needs-validation', 'novalidate'=>'')); ?>
       <table>
         <div class="form-group">
           <label class="col-sm-2 col-sm-2 control-label">Id Anggota</label>
@@ -126,7 +130,8 @@
         <div class="form-group">
           <label class="col-sm-2 col-sm-2 control-label">Nama</label>
           <div class="col-sm-10">
-            <input type="text" name="nama" value="<?php echo $key->nama_anggota; ?>">
+            <input type="text" name="nama" value="<?php echo $key->nama_anggota; ?>" required>
+            <div class="invalid-feedback">Isi Nama</div>
           </div>
         </div>
         <br></br>
@@ -171,13 +176,14 @@
         </div>
         <br></br>
         <tr>
-          <td colspan="3"><input type="submit" name="edit" value="Edit" class="btn btn-primary"></td>
+          <td colspan="3"><input id="submitBtn" type="submit" name="edit" value="Edit" class="btn btn-primary"></td>
         </tr>
       </table>
       <?php endforeach ?>   
       </div>       
-              </section>
-              </section>
+      </section>
+      </section>
+    </form>
 
     <!-- js placed at the end of the document so the pages load faster -->
     <script src="../../assets/js/jquery.js"></script>
@@ -197,6 +203,20 @@
 
     <!--script for this page-->
     <script src="../../assets/js/sparkline-chart.js"></script>    
-  <script src="../../assets/js/zabuto_calendar.js"></script> 
+  <script src="../../assets/js/zabuto_calendar.js"></script>
+
+  <link rel="stylesheet" href="<?php echo base_url() ?>assets/assets/css/bootstrap.min.css">
+        
+        <link rel="stylesheet" href="<?php echo base_url() ?>assets/assets/css/custom.css">
+
+        <script src="<?php echo base_url() ?>assets/assets/js/jquery-1.9.1.min.js"></script>
+
+  <script src="<?php echo base_url() ?>assets/assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="<?php echo base_url() ?>assets/assets/js/holder.min.js"></script>
+
+    <!-- Custom -->
+    <script src="<?php echo base_url() ?>assets/assets/js/custom.js"></script>
   </body>
 </html>
