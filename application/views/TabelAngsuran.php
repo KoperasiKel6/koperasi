@@ -136,7 +136,7 @@
                         <!-- <td><?php echo $besar_pinjaman;?></td> -->
 
                         
-                        <td><a href='ctrAnsuran/delete/<?php echo $id_pelunasan; ?>' class='btn btn-sm btn-danger'>Delete</a></td>
+                        <td><a href='ctrAngsuran/delete/<?php echo $id_angsuran; ?>' class='btn btn-sm btn-danger'>Delete</a></td>
                   </tr>
                   <?php endforeach;?>
             </tbody>

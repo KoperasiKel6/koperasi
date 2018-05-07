@@ -39,7 +39,7 @@ class Ctrpinjam extends CI_Controller {
 	}
 
 	public function delete($id){
-		$this->Ctrpinjam->delete($id);
+		$this->Pinjam->delete($id);
 		redirect('Ctrpinjam');
 	}
 }

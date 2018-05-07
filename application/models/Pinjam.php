@@ -36,6 +36,6 @@ class Pinjam extends CI_Model {
 
 
 	public function delete($id){
-		$query = $this->db->query('DELETE from pinjaman WHERE id_pinjam= '.$id);
+		$query = $this->db->query('DELETE from pinjaman WHERE id_pinjaman= '.$id);
 	}
 }

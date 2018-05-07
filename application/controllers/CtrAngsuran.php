@@ -40,4 +40,9 @@ class CtrAngsuran extends CI_Controller {
 			$this->load->view('TabelAngsuran');
 		}
 	}
+
+	public function delete($id){
+		$this->angsuran->delete($id);
+		redirect('CtrAngsuran');
+	}
 }
