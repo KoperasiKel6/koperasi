@@ -24,6 +24,7 @@ class CtrAngsuran extends CI_Controller {
 		$data['data'] = $this->Nasabah->get_all_nasabah();
 		$data['pinjam'] = $this->Pinjam->get_all_pinjam();
 
+		$this->load->helper('form');
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('id_anggota', 'besar pinjaman', 'required', array('required' => 'Isi %s terlebih dahulu , '));
 		$this->form_validation->set_rules('id_pinjaman', 'tanggal pinjaman', 'required', array('required' => 'Isi %s terlebih dahulu, '));

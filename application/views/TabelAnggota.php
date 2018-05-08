@@ -7,8 +7,13 @@
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>DASHGUM - FREE Bootstrap Admin Template</title>
+    <title>KOPERASI SIMPAN PINJAM CERIA</title>
 
+    <!-- Data Tabel -->
+    <script src = "https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></script>
+    <script src = "https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src = "https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <!--external css-->
@@ -42,7 +47,7 @@
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
             <!--logo start-->
-            <a href="home" class="logo"><b>DASHGUM FREE</b></a>
+            <a href="home" class="logo"><b>KOPERASI SIMPAN PINJAM CERIA</b></a>
             <!--logo end-->
             <div class="nav notify-row" id="top_menu">
 
@@ -65,7 +70,7 @@
               <ul class="sidebar-menu" id="nav-accordion">
               
                   <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-                  <h5 class="centered">Marcel Newman</h5>
+                  <h5 class="centered">ADMIN</h5>
                     
                   <li class="mt">
                       <a  href="home">
@@ -101,12 +106,17 @@
       </aside>
       <section id="main-content">
       <section class="wrapper">
+
+       <script type="text/javascript"> 
+       $(document).ready(function() {
+    $('#anggota').DataTable();
+} );</script>
                               <br></br>
                              <td><a href='ctrNasabah/tambah' class='btn btn-sm btn-info'>Tambah</a></td>
                              <br></br>
                              <br></br>
         <div class="card-content table-responsive">
-            <table class="table">
+            <table id = "anggota" class="table">
                 <thead class="text-primary">
                     <th>Id Nasabah</th>
                     <th>Nama</th>

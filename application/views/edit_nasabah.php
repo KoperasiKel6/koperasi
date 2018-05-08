@@ -7,7 +7,7 @@
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>DASHGUM - FREE Bootstrap Admin Template</title>
+    <title>KOPERASI SIMPAN PINJAM CERIA</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../../assets/css/bootstrap.css" rel="stylesheet">
@@ -42,7 +42,7 @@
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
             <!--logo start-->
-            <a href="../../home" class="logo"><b>DASHGUM FREE</b></a>
+            <a href="../../home" class="logo"><b>KOPERASI SIMPAN PINJAM CERIA</b></a>
             <!--logo end-->
             <div class="nav notify-row" id="top_menu">
 
@@ -65,7 +65,7 @@
               <ul class="sidebar-menu" id="nav-accordion">
               
                   <p class="centered"><a href="profile.html"><img src="../../assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-                  <h5 class="centered">Marcel Newman</h5>
+                  <h5 class="centered">ADMIN</h5>
                     
                   <li class="mt">
                       <a  href="../../home">
