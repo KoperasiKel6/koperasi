@@ -114,7 +114,7 @@
                     <th>Tanggal Angsuran</th>
                     <th>Besar Angsuran</th>
                     <!-- <th>Sisa Angsuran</th> -->
-                    <th>Aksi</th>
+                    <!-- <th>Aksi</th> -->
                 </thead>
 
                 <tbody>
@@ -136,7 +136,7 @@
                         <!-- <td><?php echo $besar_pinjaman;?></td> -->
 
                         
-                        <td><a href='ctrAngsuran/delete/<?php echo $id_angsuran; ?>' class='btn btn-sm btn-danger'>Delete</a></td>
+                        <!-- <td><a href='ctrAngsuran/delete/<?php echo $id_angsuran; ?>' class='btn btn-sm btn-danger'>Delete</a></td> -->
                   </tr>
                   <?php endforeach;?>
             </tbody>

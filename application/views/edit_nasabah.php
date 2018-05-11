@@ -122,7 +122,7 @@
         <div class="form-group">
           <label class="col-sm-2 col-sm-2 control-label">Id Anggota</label>
           <div class="col-sm-10">
-            <input type="text" name="id_anggota" readonly value="<?php echo $key->id_anggota; ?>">
+            <input type="text" class="form-control" name="id_anggota" readonly value="<?php echo $key->id_anggota; ?>">
           </div>
         </div>
         <br></br>
@@ -130,7 +130,7 @@
         <div class="form-group">
           <label class="col-sm-2 col-sm-2 control-label">Nama</label>
           <div class="col-sm-10">
-            <input type="text" name="nama" value="<?php echo $key->nama_anggota; ?>" required>
+            <input type="text" class="form-control" name="nama" value="<?php echo $key->nama_anggota; ?>" required>
             <div class="invalid-feedback">Isi Nama</div>
           </div>
         </div>
@@ -139,7 +139,8 @@
         <div class="form-group">
           <label class="col-sm-2 col-sm-2 control-label">Alamat</label>
           <div class="col-sm-10">
-            <input type="text" name="alamat" value="<?php echo $key->alamat_anggota; ?>">
+            <input type="text" class="form-control" name="alamat" value="<?php echo $key->alamat_anggota; ?>" required>
+            <div class="invalid-feedback">Isi Alamat</div>
           </div>
         </div>
         <br></br>
@@ -147,7 +148,8 @@
         <div class="form-group">
           <label class="col-sm-2 col-sm-2 control-label">Tempat Lahir</label>
           <div class="col-sm-10">
-            <input type="text" name="tempat" value="<?php echo $key->tempat_lahir_anggota; ?>">
+            <input type="text" class="form-control" name="tempat" value="<?php echo $key->tempat_lahir_anggota; ?>" required>
+            <div class="invalid-feedback">Isi Tempat Lahir</div>
           </div>
         </div>
         <br></br>
@@ -155,7 +157,8 @@
          <div class="form-group">
           <label class="col-sm-2 col-sm-2 control-label">Tanggal Lahir</label>
           <div class="col-sm-10">
-            <input type="date" name="tanggal" value="<?php echo $key->tanggal_lahir_anggota; ?>">
+            <input type="date" name="tanggal" class="form-control" value="<?php echo $key->tanggal_lahir_anggota; ?>" required>
+            <div class="invalid-feedback">Isi Tanggal Lahir</div>
           </div>
         </div>
         <br></br>
@@ -163,13 +166,14 @@
         <div class="form-group">
           <label class="col-sm-2 col-sm-2 control-label">Jenis Kelamin</label>
           <div class="col-sm-10">
-            <input type="text" name="jenis_kelamin" value="<?php echo $key->jk_anggota; ?>">
+            <input type="text" class="form-control" name="jenis_kelamin" value="<?php echo $key->jk_anggota; ?>" required>
+            <div class="invalid-feedback">Isi Jenis Kelamin</div>
           </div>
         </div>
         <br></br>
         <br></br>
          <div class="form-group">
-          <label class="col-sm-2 col-sm-2 control-label">Jenis Kelamin</label>
+          <label class="col-sm-2 col-sm-2 control-label">Upload Gambar</label>
           <div class="col-sm-10">
             <input type="file" name="gambar">
           </div>
