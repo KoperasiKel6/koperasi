@@ -96,13 +96,12 @@
                       </a>
                   </li>
 
-                  <!-- <li class="sub-menu">
-                      <a  href="TabelTransaksi.php" >
-                          <i class="fa fa-tasks"></i>
-                          <span>Data Ang</span>
+                 <li class="sub-menu">
+                      <a href="ctrUser" >
+                          <i class="fa fa-book"></i>
+                          <span>Data User</span>
                       </a>
-                  </li> -->
-                  
+                  </li>
                
 
               </ul>

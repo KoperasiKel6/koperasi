@@ -100,6 +100,13 @@
                           <span>Data Angsuran</span>
                       </a>
                   </li>
+
+                   <li class="sub-menu">
+                      <a href="ctrUser" >
+                          <i class="fa fa-book"></i>
+                          <span>Data User</span>
+                      </a>
+                  </li>
               </ul>
               <!-- sidebar menu end-->
           </div>
