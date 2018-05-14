@@ -32,19 +32,19 @@
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	
 	<!-- Animate.css -->
-	<link rel="stylesheet" href="assets/user/css/animate.css">
+	<link rel="stylesheet" href="<?php echo base_url() ?>assets/user/css/animate.css">
 	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="assets/user/css/icomoon.css">
+	<link rel="stylesheet" href="<?php echo base_url() ?>assets/user/css/icomoon.css">
 	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="assets/user/css/bootstrap.css">
+	<link rel="stylesheet" href="<?php echo base_url() ?>assets/user/css/bootstrap.css">
 	<!-- Owl Carousel -->
-	<link rel="stylesheet" href="assets/user/css/owl.carousel.min.css">
-	<link rel="stylesheet" href="assets/user/css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="<?php echo base_url() ?>assets/user/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="<?php echo base_url() ?>assets/user/css/owl.theme.default.min.css">
 	<!-- Theme style  -->
-	<link rel="stylesheet" href="assets/user/css/style.css">
+	<link rel="stylesheet" href="<?php echo base_url() ?>assets/user/css/style.css">
 
 	<!-- Modernizr JS -->
-	<script src="assets/user/js/modernizr-2.6.2.min.js"></script>
+	<script src="<?php echo base_url() ?>assets/user/js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -83,7 +83,7 @@
 						<hr class="light my-4">
 						<p class="text-faded mb-4">
 						<a href="CtrUser/view/<?php echo $key->id_anggota ?>" style="color:black;">
-						 <img src="img/<?php echo $key->img_anggota; ?>" alt="image" width="200"style="text-align:left">
+						 <img src="<?php echo base_url() ?>img/<?php echo $key->img_anggota; ?>" alt="image" width="200"style="text-align:left">
 						 </a>
 					</div>
 
@@ -100,25 +100,37 @@
 	</div>
 	</div>
 
+
+<center>
+	<?php
+ // $links ini berasal dari fungsi pagination
+ // Jika $links ada (data melebihi jumlah max per page), maka tampilkan
+ if (isset($links)) {
+ echo $links;
+ }
+ ?>
+
+ </main>
+</center>
 	
 	<!-- jQuery -->
-	<script src="assets/user/js/jquery.min.js"></script>
+	<script src="<?php echo base_url() ?>assets/user/js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
-	<script src="assets/user/js/jquery.easing.1.3.js"></script>
+	<script src="<?php echo base_url() ?>assets/user/js/jquery.easing.1.3.js"></script>
 	<!-- Bootstrap -->
-	<script src="assets/user/js/bootstrap.min.js"></script>
+	<script src="<?php echo base_url() ?>assets/user/js/bootstrap.min.js"></script>
 	<!-- Carousel -->
-	<script src="assets/user/js/owl.carousel.min.js"></script>
+	<script src="<?php echo base_url() ?>assets/user/js/owl.carousel.min.js"></script>
 	<!-- Stellar -->
-	<script src="assets/user/js/jquery.stellar.min.js"></script>
+	<script src="<?php echo base_url() ?>assets/user/js/jquery.stellar.min.js"></script>
 	<!-- Waypoints -->
-	<script src="assets/user/js/jquery.waypoints.min.js"></script>
+	<script src="<?php echo base_url() ?>assets/user/js/jquery.waypoints.min.js"></script>
 	<!-- Counters -->
 	<script src="assets/user/js/jquery.countTo.js"></script>
 	
 	
 	<!-- MAIN JS -->
-	<script src="assets/user/js/main.js"></script>
+	<script src="<?php echo base_url() ?>assets/user/js/main.js"></script>
 
 	</body>
 </html>
