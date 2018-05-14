@@ -9,30 +9,14 @@
 
     <title>KOPERASI SIMPAN PINJAM CERIA</title>
 
-    <!-- Data Tabel -->
-    <script src = "https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></script>
-    <script src = "https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-    <script src = "https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <!--external css-->
-    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="assets/css/zabuto_calendar.css">
-    <link rel="stylesheet" type="text/css" href="assets/js/gritter/css/jquery.gritter.css" />
-    <link rel="stylesheet" type="text/css" href="assets/lineicons/style.css">    
+     <!-- Bootstrap core CSS -->
+    <link href="<?php echo base_url() ?>assets/css/bootstrap.css" rel="stylesheet">
     
     <!-- Custom styles for this template -->
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/style-responsive.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>assets/css/style.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>assets/css/style-responsive.css" rel="stylesheet">
 
-    <script src="assets/js/chart-master/Chart.js"></script>
-    
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+        <script src="<?php echo base_url() ?>assets/assets/js/jquery-1.9.1.min.js"></script>  
   </head>
 
   <body>
@@ -69,18 +53,18 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
               
-                  <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
+                  <p class="centered"><a href="profile.html"><img src="<?php echo base_url() ?>assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
                   <h5 class="centered">ADMIN</h5>
                     
                   <li class="mt">
-                      <a  href="home">
+                      <a  href="<?php echo base_url() ?>home">
                           <i class="fa fa-dashboard"></i>
                           <span>Dashboard</span>
                       </a>
                   </li>
 
                   <li class="sub-menu">
-                      <a class="active" href="CtrNasabah">
+                      <a class="active" href="<?php echo base_url() ?>CtrNasabah">
                           <i class="fa fa-desktop" ></i>
                           <span>Data Anggota</span>
                           
@@ -88,21 +72,21 @@
                   </li>
 
                   <li class="sub-menu">
-                      <a  href="ctrpinjam">
+                      <a  href="<?php echo base_url() ?>ctrpinjam">
                           <i class="fa fa-cogs"></i>
                           <span>Data Pinjaman</span>
                       </a>
                   </li>
 
                   <li class="sub-menu">
-                      <a href="ctrangsuran" >
+                      <a href="<?php echo base_url() ?>ctrangsuran" >
                           <i class="fa fa-book"></i>
                           <span>Data Angsuran</span>
                       </a>
                   </li>
 
                    <li class="sub-menu">
-                      <a href="ctrUser" >
+                      <a href="<?php echo base_url() ?>ctrUser" >
                           <i class="fa fa-book"></i>
                           <span>Data User</span>
                       </a>
@@ -114,16 +98,17 @@
       <section id="main-content">
       <section class="wrapper">
 
-       <script type="text/javascript"> 
-       $(document).ready(function() {
-    $('#anggota').DataTable();
-} );</script>
-                              <br></br>
-                             <td><a href='ctrNasabah/tambah' class='btn btn-sm btn-info'>Tambah</a></td>
-                             <br></br>
-                             <br></br>
-        <div class="card-content table-responsive">
-            <table id = "anggota" class="table">
+      <br></br>
+     <td><a href='<?php echo base_url() ?>ctrNasabah/tambah' class='btn btn-sm btn-info'>Tambah</a></td>
+     <br></br>
+     <br></br>
+      <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row">
+
+        <div class="card-content table-responsive">          
+            
+            <table id="dt-basic" class="table table-striped table-bordered">
                 <thead class="text-primary">
                     <th>Id Nasabah</th>
                     <th>Nama</th>
@@ -145,7 +130,7 @@
                               $tanggal=$i['tanggal_lahir_anggota'];
                               $jenis_kelamin=$i['jk_anggota'];
                               $gambar=$i['img_anggota'];
-                  ?>
+                        ?>
                   <tr>
                         <td><?php echo $id_nasabah;?> </td>
                         <td><?php echo $nama;?> </td>
@@ -153,9 +138,11 @@
                         <td><?php echo $tempat;?> </td>
                         <td><?php echo $tanggal;?> </td>
                         <td><?php echo $jenis_kelamin;?> </td>
-                        <td><img src="img/<?php echo $gambar;?>"alt="Image" width="50" height="40"> </td>
-                        <td><a href='ctrNasabah/edit/<?php echo $id_nasabah ?>' class='btn btn-sm btn-info'>Update</a></td>
-                        <td><a href='ctrNasabah/delete/<?php echo $id_nasabah; ?>' class='btn btn-sm btn-danger'>Delete</a></td>
+                        <td><img src="<?php echo base_url() ?>img/<?php echo $gambar;?>"alt="Image" width="50" height="40"> </td>
+                        <td>
+                          <a href='<?php echo base_url() ?>ctrNasabah/edit/<?php echo $id_nasabah ?>' class='btn btn-sm btn-info'>Update</a>
+                          <a href='<?php echo base_url() ?>ctrNasabah/delete/<?php echo $id_nasabah; ?>' class='btn btn-sm btn-danger'>Delete</a>
+                        </td>
                   </tr>
                   <?php endforeach;?>
             </tbody>
@@ -169,24 +156,20 @@
               </section>
               </section>
 
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/assets/css/jquery.dataTables.min.css">
+<script src="<?php echo base_url(). 'assets/assets/js/jquery.dataTables.min.js'?>"></script>
+<script src="<?php echo base_url(). 'assets/assets/js/jquery.dataTables.bootstrap4.min.js'?>"></script>
+<script >
+         $(document).ready(function(){
+
+        // Contoh inisialisasi Datatable tanpa konfigurasi apapun
+        // #dt-basic adalah id html dari tabel yang diinisialisasi
+        $('#dt-basic').DataTable();
+    });
+</script>
+
     <!-- js placed at the end of the document so the pages load faster -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/jquery-1.8.3.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
-    <script src="assets/js/jquery.scrollTo.min.js"></script>
-    <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
-    <script src="assets/js/jquery.sparkline.js"></script>
-
-
-    <!--common script for all pages-->
-    <script src="assets/js/common-scripts.js"></script>
-    
-    <script type="text/javascript" src="assets/js/gritter/js/jquery.gritter.js"></script>
-    <script type="text/javascript" src="assets/js/gritter-conf.js"></script>
-
-    <!--script for this page-->
-    <script src="assets/js/sparkline-chart.js"></script>    
-	<script src="assets/js/zabuto_calendar.js"></script>	
+  <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="<?php echo base_url() ?>assets/assets/css/bootstrap.min.css">
   </body>
 </html>
