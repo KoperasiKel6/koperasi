@@ -99,9 +99,9 @@
       <section class="wrapper">
 
       <br></br>
+      <h1>List Anggota Koperasi Ceria</h1><br>
      <td><a href='<?php echo base_url() ?>ctrNasabah/tambah' class='btn btn-sm btn-info'>Tambah</a></td>
-     <br></br>
-     <br></br>
+     <br>
       <div class="album py-5 bg-light">
       <div class="container">
         <div class="row">

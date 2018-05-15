@@ -97,8 +97,8 @@
           </div>
       </aside>
        <section id="main-content">
-      <section class="wrapper">
-                              <br></br>
+      <section class="wrapper">      <br></br>
+      <h1>List Anggota Koperasi Ceria</h1><br>
                              <td><a href='ctrpinjam/tambah' class='btn btn-sm btn-info'>Tambah</a></td>
                              <br></br>
                              <br></br>

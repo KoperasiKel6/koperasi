@@ -97,7 +97,8 @@
       </aside>
        <section id="main-content">
       <section class="wrapper">
-                              <br></br>
+            <br></br>
+      <h1>List Angsuran Koperasi Ceria</h1><br>
                              <td><a href='ctrAngsuran/tambah' class='btn btn-sm btn-info'>Tambah</a></td>
                              <br></br>
                              <br></br><div class="card-content table-responsive">

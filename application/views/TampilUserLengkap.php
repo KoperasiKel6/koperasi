@@ -54,10 +54,10 @@
 		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
 		<aside id="fh5co-aside" role="complementary" class="border js-fullheight">
 
-			<h1 id="fh5co-logo"><a href="index.html"><img src="assets/user/images/logo.png" alt="KOPERASI SIMPAN PINJAM CERIA"></a></h1>
+			<h1 id="fh5co-logo"><a href="index.html">KOPERASI SIMPAN PINJAM CERIA</h1>
 			<nav id="fh5co-main-menu" role="navigation">
 				<ul>
-					<li><a href="index.html">Home</a></li>
+					<li><a href="CtrUser/index">Home</a></li>
 					<li><a href="about.html">About</a></li>
 				</ul>
 			</nav>
@@ -68,11 +68,12 @@
 
 		<div id="fh5co-main">
 			<div class="fh5co-narrow-content">
+			<center><h1>Data Lengkap Anggota</h1></center>
 			<?php foreach ($data as $x): ?>
-				<div class="container">
+				
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				
-				<img src=img/<?php echo $x->img_anggota; ?>></center><br/>
+				<center><img src="<?php echo base_url().'img/'?><?php echo $x->img_anggota; ?>" width = "150"><br/></center>
 				<center><?php echo $x->nama_anggota; ?><hr/>
 				<br><b><?php echo $x->alamat_anggota;?><br/></b>
 				<br><b><?php echo $x->tempat_lahir_anggota;?></b>,
