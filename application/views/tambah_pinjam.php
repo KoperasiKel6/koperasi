@@ -110,6 +110,9 @@
       <section class="wrapper">
 
 <div class="container">
+<h1>FORM PEMINJAMAN</h1>
+<br>
+<br>
     <?php echo validation_errors(); ?>
     <?php
       $this->form_validation->set_error_delimiters('<div class="alert alert-warning" role="alert">', '</div>');
@@ -117,9 +120,11 @@
       <?php
         echo form_open('Ctrpinjam/tambah', array('class'=>'needs-validation', 'novalidate'=>'')); 
        ?>
-      <table>
-        <tr>
-          <label>Id Anggota</label>
+       
+      <table>   
+          <div class="form-group">
+          <label class="col-sm-2 col-sm-2 control-label">Besar Pinjaman</label>
+          <div class="col-sm-10">
             <select name="id_anggota" class="form-control" required>
               <option value="">Pilih Id Anggota</option>
               <?php foreach($data as $pinjam): ?>
@@ -127,7 +132,9 @@
               <div class="invalid-feedback">Isi Id Anggota</div></td>
               <?php endforeach; ?>
             </select>
-        </tr>
+            </div>
+            </div>
+        
         <br>
         <br>
         <div class="form-group">

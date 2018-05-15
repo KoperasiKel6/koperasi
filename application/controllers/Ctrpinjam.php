@@ -25,7 +25,12 @@ class Ctrpinjam extends CI_Controller {
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('besar_pinjaman', 'besar pinjaman', 'required', array('required' => 'Isi %s terlebih dahulu , '));
 		$this->form_validation->set_rules('tanggal_pinjaman', 'tanggal pinjaman', 'required', array('required' => 'Isi %s terlebih dahulu, '));
-		$this->form_validation->set_rules('id_anggota', 'id anggota', 'required', array('required' => 'Isi %s terlebih dahulu, '));
+		$this->form_validation->set_rules('id_anggota', 'id anggota', 'required|is_unique[pinjaman.id_anggota]',
+			array(
+				'required' => 'Tolong isi %s .',
+				'is_unique' => 'Id Anggota <strong>' . $this->input->post('id_anggota') . '</strong> sudah menghutang.'
+			)
+		);
 		$this->form_validation->set_rules('tangga_pelunasan', 'tanggal pelunasan', 'required', array('required' => 'Isi %s terlebih dahulu, '));
 
 		if($this->form_validation->run()===FALSE){
