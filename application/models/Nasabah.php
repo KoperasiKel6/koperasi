@@ -5,7 +5,7 @@ class Nasabah extends CI_Model {
 
 	public function get_file(){
 		$query = $this->db->get('anggota');
-		return $query->result_array();
+		return $query->result_array(); //ngambil data yg udah array 
 	}
 	public function get_single($id)
 	{
@@ -15,7 +15,7 @@ class Nasabah extends CI_Model {
 
 	public function get_all_nasabah(){
 		$query = $this->db->get('anggota');
-		return $query->result(); 
+		return $query->result(); //ngambil data yg belum array (obyek)
 	}	
 
 

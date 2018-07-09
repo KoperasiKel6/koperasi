@@ -123,13 +123,13 @@
        
       <table>   
           <div class="form-group">
-          <label class="col-sm-2 col-sm-2 control-label">Besar Pinjaman</label>
+          <label class="col-sm-2 col-sm-2 control-label">Nama Anggota</label>
           <div class="col-sm-10">
             <select name="id_anggota" class="form-control" required>
-              <option value="">Pilih Id Anggota</option>
+              <option value="">Pilih Nama Anggota</option>
               <?php foreach($data as $pinjam): ?>
-              <option value="<?php echo $pinjam->id_anggota; ?>"><?php echo $pinjam->id_anggota; ?></option>
-              <div class="invalid-feedback">Isi Id Anggota</div></td>
+              <option value="<?php echo $pinjam->id_anggota; ?>"><?php echo $pinjam->nama_anggota; ?></option>
+              <div class="invalid-feedback">Isi Nama Anggota</div></td>
               <?php endforeach; ?>
             </select>
             </div>

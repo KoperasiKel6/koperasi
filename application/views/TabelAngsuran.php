@@ -1,53 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="Dashboard">
-    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-
-    <title>KOPERASI SIMPAN PINJAM CERIA</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="<?php echo base_url() ?>assets/css/bootstrap.css" rel="stylesheet">
+    <?php $this->load->view('template/header'); ?>
     
-    <!-- Custom styles for this template -->
-    <link href="<?php echo base_url() ?>assets/css/style.css" rel="stylesheet">
-    <link href="<?php echo base_url() ?>assets/css/style-responsive.css" rel="stylesheet">
-
         <script src="<?php echo base_url() ?>assets/assets/js/jquery-1.9.1.min.js"></script>
-  </head>
-
-  <body>
-
-  <section id="container" >
-      <!-- **********************************************************************************************************************************************************
-      TOP BAR CONTENT & NOTIFICATIONS
-      *********************************************************************************************************************************************************** -->
-      <!--header start-->
-      <header class="header black-bg">
-              <div class="sidebar-toggle-box">
-                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
-              </div>
-            <!--logo start-->
-            <a href="index.html" class="logo"><b>KOPERASI SIMPAN PINJAM CERIA</b></a>
-            <!--logo end-->
-            <div class="nav notify-row" id="top_menu">
-
-            </div>
-            <div class="top-menu">
-              <ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="login.html">Logout</a></li>
-              </ul>
-            </div>
-        </header>
-      <!--header end-->
-      
-      <!-- **********************************************************************************************************************************************************
-      MAIN SIDEBAR MENU
-      *********************************************************************************************************************************************************** -->
-      <!--sidebar start-->
       <aside>
           <div id="sidebar"  class="nav-collapse ">
               <!-- sidebar menu start-->
@@ -138,6 +91,8 @@
             </tbody>
         </table>
     </div>
+  </section>
+</section>
     <link rel="stylesheet" href="<?php echo base_url()?>assets/assets/css/jquery.dataTables.min.css">
 <script src="<?php echo base_url(). 'assets/assets/js/jquery.dataTables.min.js'?>"></script>
 <script src="<?php echo base_url(). 'assets/assets/js/jquery.dataTables.bootstrap4.min.js'?>"></script>
@@ -154,4 +109,5 @@
   <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="<?php echo base_url() ?>assets/assets/css/bootstrap.min.css">
   </body>
+        <?php $this->load->view('template/footer'); ?>
 </html>

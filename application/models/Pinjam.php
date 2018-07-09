@@ -18,7 +18,6 @@ class Pinjam extends CI_Model {
 		return $query->result(); 
 	}
 
-	
 
 	public function insert()
 	{

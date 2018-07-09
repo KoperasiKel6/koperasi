@@ -29,7 +29,7 @@ class User extends CI_Model {
  		return $query->result();
  	}
 
-
+ 
 		public function get_total()
  	{
  		// Dapatkan jumlah total artikel
