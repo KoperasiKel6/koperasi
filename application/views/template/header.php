@@ -13,15 +13,15 @@
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <!--external css-->
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="assets/css/zabuto_calendar.css">
-    <link rel="stylesheet" type="text/css" href="assets/js/gritter/css/jquery.gritter.css" />
-    <link rel="stylesheet" type="text/css" href="assets/lineicons/style.css">    
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/zabuto_calendar.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/js/gritter/css/jquery.gritter.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/lineicons/style.css">    
     
     <!-- Custom styles for this template -->
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/style-responsive.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>assets/css/style.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>assets/css/style-responsive.css" rel="stylesheet">
 
-    <script src="assets/js/chart-master/Chart.js"></script>
+    <script src="<?php echo base_url() ?>assets/js/chart-master/Chart.js"></script>
     
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -53,3 +53,53 @@
               </ul>
             </div>
         </header>
+
+        <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu" id="nav-accordion">
+              
+                  <p class="centered"><a href="<?php echo site_url() ?>home"><img src="<?php echo site_url() ?>assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
+                  <h5 class="centered">ADMIN</h5>
+                    
+                  <li class="mt">
+                      <a  href="<?php echo site_url() ?>home">
+                          <i class="fa fa-dashboard"></i>
+                          <span>Dashboard</span>
+                      </a>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="<?php echo site_url() ?>ctrNasabah">
+                          <i class="fa fa-desktop" ></i>
+                          <span>Data Anggota</span>
+                          
+                      </a>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a class href="<?php echo site_url() ?>ctrpinjam">
+                          <i class="fa fa-cogs"></i>
+                          <span>Data Pinjaman</span>
+                      </a>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a  href="<?php echo site_url() ?>ctrangsuran" >
+                          <i class="fa fa-book"></i>
+                          <span>Data Angsuran</span>
+                      </a>
+                  </li>               
+               <li class="sub-menu">
+                      <a href="<?php echo site_url() ?>ctrUser" >
+                          <i class="fa fa-book"></i>
+                          <span>Data User</span>
+                      </a>
+                  </li>
+
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <section id="main-content">
+      <section class="wrapper">

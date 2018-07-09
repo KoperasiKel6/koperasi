@@ -1,56 +1,7 @@
     <?php $this->load->view('template/header'); ?>
     
         <script src="<?php echo base_url() ?>assets/assets/js/jquery-1.9.1.min.js"></script>
-      <aside>
-          <div id="sidebar"  class="nav-collapse ">
-              <!-- sidebar menu start-->
-              <ul class="sidebar-menu" id="nav-accordion">
-              
-                  <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-                  <h5 class="centered">ADMIN</h5>
-                    
-                    <li class="mt">
-                      <a  href="home">
-                          <i class="fa fa-dashboard"></i>
-                          <span>Dashboard</span>
-                      </a>
-                  </li>
 
-                  <li class="sub-menu">
-                      <a href="CtrNasabah">
-                          <i class="fa fa-desktop" ></i>
-                          <span>Data Anggota</span>
-                          
-                      </a>
-                  </li>
-
-                  <li class="sub-menu">
-                      <a href="ctrpinjam">
-                          <i class="fa fa-cogs"></i>
-                          <span>Data Pinjaman</span>
-                      </a>
-                  </li>
-
-                  <li class="sub-menu">
-                      <a class="active" href="ctrangsuran" >
-                          <i class="fa fa-book"></i>
-                          <span>Data Angsuran</span>
-                      </a>
-                  </li>
-                  <li class="sub-menu">
-                      <a href="ctrUser" >
-                          <i class="fa fa-book"></i>
-                          <span>Data User</span>
-                      </a>
-                  </li>
-
-              </ul>
-              <!-- sidebar menu end-->
-          </div>
-      </aside>
-       <section id="main-content">
-      <section class="wrapper">
-            <br></br>
       <h1>List Angsuran Koperasi Ceria</h1><br>
                              <td><a href='ctrAngsuran/tambah' class='btn btn-sm btn-info'>Tambah</a></td>
                              <br></br>
